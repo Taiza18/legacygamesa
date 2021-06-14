@@ -9,32 +9,13 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Platform</th>
-            <th scope="col">Year</th>
-            <th scope="col">Priceoriginal</th>
-            <th scope="col">Etiqueta</th>
-            <th scope="col">Discount</th>
-            <th scope="col">Pricediscount</th>
-            <th scope="col">Category</th>
-            <th scope="col">Publisher</th>
-            <th scope="col">PEGI</th>
-            <th scope="col">PEGIcontentdescriptors</th>
+
         </tr>
         </thead>
         <tbody>
         <tr th:each="game:${games}">
             <td th:text="${game.id}"></td>
-            <td th:text="${game.title}"></td>
-            <td th:text="${game.platform}"></td>
-            <td th:text="${game.year}"></td>
-            <td th:text="${game.priceoriginal}"></td>
-            <td th:text="${game.etiqueta}"></td>
-            <td th:text="${game.discount}"></td>
-            <td th:text="${game.category}"></td>
-            <td th:text="${game.publisher}"></td>
-            <td th:text="${game.PEGI}"></td>
-            <td th:text="${game.PEGIcontentdescriptors}"></td>
+
 
         </tr>
         </tbody>

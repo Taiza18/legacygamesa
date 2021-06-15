@@ -11,8 +11,7 @@ import java.util.List;
 public class GameController {
     private GameService gameService;
     @Autowired
-    public GameController(GameService gameService) {
-        this.gameService = gameService;
+    public GameController(GameService gameService) { this.gameService = this.gameService;
     }
     @GetMapping("/games")
     String listGames(Model model) {

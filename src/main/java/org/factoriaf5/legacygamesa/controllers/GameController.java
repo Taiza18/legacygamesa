@@ -1,6 +1,7 @@
 package org.factoriaf5.legacygamesa.controllers;
-import org.factoriaf5.legacygamesa.services.GameService;
+
 import org.factoriaf5.legacygamesa.models.Game;
+import org.factoriaf5.legacygamesa.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

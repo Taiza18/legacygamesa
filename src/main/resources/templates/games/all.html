@@ -5,21 +5,17 @@
 <header th:replace="fragments/header"></header>
 <section class="container">
     <h1 th:text="${title}"></h1>
-      <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Id</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="game:${games}">
-            <td th:text="${game.id}"></td>
+      <div class="game-list">
 
 
-        </tr>
-        </tbody>
-    </table>
+        <div class="game" th:each="game:${games}">
+            <div th:text="${game.title}"></div>
+            <div th:text="${game.priceoriginal}"></div>
+
+
+        </div>
+
+    </div>
 </section>
 <footer th:replace="fragments/footer"></footer>
 

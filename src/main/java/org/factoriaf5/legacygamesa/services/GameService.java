@@ -35,6 +35,6 @@ public class GameService {
     }
 
     public List<Game> allGame() {
-        return null;
+        return (List<Game>) gameRepository.findAll();
     }
 }

@@ -38,7 +38,7 @@ public class GameController {
     }
 
     @GetMapping("edit/{id}")
-    String editGame(Model model, @PathVariable Long id){
+    public String editGame(Model model, @PathVariable Long id){
         Game game = gameService.findById(id);
         model.addAttribute("game", game);
         model.addAttribute("title", "Edit games");
@@ -46,7 +46,7 @@ public class GameController {
     }
 
     @GetMapping("/delete/{id}")
-    String removeGame(@PathVariable Long id){
+    public String removeGame(@PathVariable Long id){
         gameService.delete(id);
         return "redirect:/games";
     }

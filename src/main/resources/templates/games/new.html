@@ -5,27 +5,30 @@
 <body>
 <header th:replace="fragments/header"></header>
 <section class="container">
-    <form>
+    <form th:action="@{/games/new}" th:object="${game}" method="post">
         <div class="form-group">
-            <label class="col-md2" for="title">Title</label>
-            <input type="text" class="col-md6 form-control form-control-sm" id="title"
-                   placeholder="Enter title">
+        <input type="hidden" th:field="*{id}">
+        <label class="col-md2" for="title">Title</label>
+        <input th:field="*{title}" type="text" class="col-md6 form-control form-control-sm" id="title"
+               placeholder="Enter title">
         </div>
+
         <div class="form-group">
             <label class="col-md2" for="platform">Platform</label>
-            <input type="text" class="col-md6 form-control form-control-sm" id="platform"
-                   placeholder="Enter platform">
+            <input th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform"
+                placeholder="Enter platform">
         </div>
         <div class="form-group">
             <label class="col-md2" for="priceoriginal">Price</label>
-            <input type="text" class="col-md6 form-control form-control-sm" id="priceoriginal"
-                   placeholder="Enter priceoriginal">
+            <input th:field="*{priceoriginal}" type="text" class="col-md6 form-control form-control-sm" id="priceoriginal"
+                placeholder="Enter priceoriginal">
         </div>
+
         <div class="card-footer ">
             <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
         </div>
     </form>
-</section>
+    </section>
 <footer th:replace="fragments/footer"></footer>
 </body>
 </html>

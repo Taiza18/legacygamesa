@@ -11,31 +11,32 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+
+
 @Controller
 public class GameController {
     private GameService gameService;
+
     @Autowired
     public GameController(GameService gameService) { this.gameService = gameService;
     }
-    @GetMapping("/games")
-    String listGames(Model model) {
-        List<Game> games = gameService.allGame();
-        model.addAttribute("title", "Game list");
-        model.addAttribute("games", games);
-        return "games/all";
-    }
+
+
 
     @GetMapping("/new")
-    String getForm(Model model){
+    public String getForm(Model model){
         Game game = new Game();
         model.addAttribute("game", game);
+        model.addAttribute("title","Create new games");
         return "games/new";
     }
+
     @PostMapping("/new")
-    String addGame(@ModelAttribute Game game) {
+   public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
-        return "redirect:/games";
+        return "redirect:/";
     }
+
     @GetMapping("edit/{id}")
     String editGame(Model model, @PathVariable Long id){
         Game game = gameService.findById(id);

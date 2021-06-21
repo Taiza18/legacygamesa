@@ -21,7 +21,7 @@ public class GameController {
 
 
 
-    @GetMapping("/new")
+    @GetMapping("/edit")
     public String getForm(Model model){
         Game game = new Game();
         model.addAttribute("game", game);
@@ -29,13 +29,13 @@ public class GameController {
         return "edit";
     }
 
-    @PostMapping("/new")
+    @PostMapping("/edit")
    public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
         return "redirect:/";
     }
 
-    @GetMapping("new/edit/{id}")
+    @GetMapping("edit/edit/{id}")
     public String editGame(Model model, @PathVariable Long id){
         Game game = gameService.findById(id);
         model.addAttribute("game", game);

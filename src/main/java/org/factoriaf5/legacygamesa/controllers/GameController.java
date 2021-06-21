@@ -21,21 +21,21 @@ public class GameController {
 
 
 
-    @GetMapping("/edit")
+    @GetMapping("/games")
     public String getForm(Model model){
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title","Create new games");
-        return "edit";
+        return "/games/all";
     }
 
-    @PostMapping("/edit")
+    @PostMapping("/home")
    public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
-        return "redirect:/";
+        return "redirect:/games";
     }
 
-    @GetMapping("edit/edit/{id}")
+    @GetMapping("games/edit/{id}")
     public String editGame(Model model, @PathVariable Long id){
         Game game = gameService.findById(id);
         model.addAttribute("game", game);
@@ -43,7 +43,7 @@ public class GameController {
         return "games/edit";
     }
 
-    @GetMapping("new/delete/{id}")
+    @GetMapping("home/delete/{id}")
     public String removeGame(@PathVariable Long id){
         gameService.delete(id);
         return "redirect:/games";

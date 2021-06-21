@@ -21,18 +21,18 @@ public class GameController {
 
 
 
-    @GetMapping("/games")
+    @GetMapping("/games/new")
     public String getForm(Model model){
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title","Create new games");
-        return "/games/all";
+        return "games/edit";
     }
 
-    @PostMapping("/home")
+    @PostMapping("/games/new")
    public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
-        return "redirect:/games";
+        return "redirect:/";
     }
 
     @GetMapping("games/edit/{id}")
@@ -43,10 +43,10 @@ public class GameController {
         return "games/edit";
     }
 
-    @GetMapping("home/delete/{id}")
+    @GetMapping("games/delete/{id}")
     public String removeGame(@PathVariable Long id){
         gameService.delete(id);
-        return "redirect:/games";
+        return "redirect:/home";
     }
 
 }

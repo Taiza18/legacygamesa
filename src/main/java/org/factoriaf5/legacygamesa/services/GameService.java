@@ -16,12 +16,6 @@ public class GameService {
     public GameService(GameRepository gameRepository){
         this.gameRepository = gameRepository;
     }
-
-    public List<Game> allGames() {
-        List<Game> allGame = (List<Game>) gameRepository.findAll();
-        return allGame;
-    }
-
     public void save(Game game) {
         gameRepository.save(game);
     }

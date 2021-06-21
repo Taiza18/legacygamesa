@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head"></head>
-<body>
-<header th:replace="fragments/header"></header>
 <section class="container">
     <h1 th:text="${title}"></h1>
 
-      <div class="game-list" th:each="game:${games}">
-      <div th:text="${game.id}">Mark</div>
-      <div th:text="${game.title}">Mark</div>
-      <div th:text="${game.platform}">Mark</div>
-      <div th:text="${game.priceoriginal}">Mark</div>
-      <div th:text="${game.edit}">Mark</div>
-      <div th:text="${game.delete}">Mark</div>
-      </div>
-
-
-        <div class="game" th:each="game:${games}">
-            <div th:text="${game.id}"></div>
-            <div th:text="${game.title}"></div>
-            <div th:text="${game.platform}"></div>
-            <div th:text="${game.priceoriginal}"></div>
-
-       </div>
-    <div>
-        <a class="btn btn-success btn-sm" th:href="'/games/edit/'+${game.id}">Edit</a>
-    </div>
-    <div>
-        <a class="btn btn-danger btn-sm" th:href="'/games/delete/'+${game.id}">Delete</a>
-    </div>
+    <div class="game-list" th:each="game:${games}">
+        <div th:text="${game.id}">Mark</div>
+        <div th:text="${game.title}">Mark</div>
+        <div th:text="${game.platform}">Mark</div>
+        <div th:text="${game.priceoriginal}">Mark</div>
 
     </div>
+
+
+    <div class="game" th:each="game:${games}">
+        <div th:text="${game.id}"></div>
+        <div th:text="${game.title}"></div>
+        <div th:text="${game.platform}"></div>
+        <div th:text="${game.priceoriginal}"></div>
+        <button>
+            <a class="btn btn-danger btn-sm" th:href="'/games/delete/'+${game.id}">Delete</a>
+        </button>
+    </div>
+
+
+
 
 </section>
-<footer th:replace="fragments/footer"></footer>
-</body>

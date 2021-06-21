@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head.html"></head>
+<head th:replace="fragments/head"></head>
 
 <body>
 <header th:replace="fragments/header"></header>
 <section class="container">
-    <form th:action="@{/games/edit}" th:object="${game}" method="post">
+    <form th:action="@{/games/new}" th:object="${game}" method="post">
         <div class="form-group">
         <input type="hidden" th:field="*{id}">
         <label class="col-md2" for="title">Title</label>

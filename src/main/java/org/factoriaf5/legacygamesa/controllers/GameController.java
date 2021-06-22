@@ -35,7 +35,7 @@ public class GameController {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         game.setPhoto(fileName);
         gameService.save(game);
-        String upLoadDir = "game-photo/" + game.getId();
+        String uploadDir = "game-photo/" + game.getId();
         FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
         return "redirect:/home";
     }

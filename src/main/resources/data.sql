@@ -1,4 +1,4 @@
-INSERT INTO games(platform, title, priceoriginal)
-VALUES ('Wii', 'Wii Sports', '19.99'),
-       ('Super Mario Brothers', 'NES', '14.99'),
-       ('Mario Kart Wii', 'Wii', '9.99');
+INSERT INTO games(platform, title, priceoriginal, photo)
+VALUES ('Wii', 'Wii Sports', '19.99', default),
+       ('Super Mario Brothers', 'NES', '14.99', default),
+       ('Mario Kart Wii', 'Wii', '9.99', default);

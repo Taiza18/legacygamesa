@@ -2,6 +2,7 @@
     <h1 th:text="${title}"></h1>
 
     <div class="game" th:each="game:${games}">
+        <img th:src="@{${game.photoImagePath}}" />
         <div th:text="${game.id}"></div>
         <div th:text="${game.title}"></div>
         <div th:text="${game.platform}"></div>

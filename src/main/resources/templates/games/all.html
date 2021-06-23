@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" xmlns:th="http://www.thymeleaf.org">
     <h1 th:text="${title}"></h1>
 
     <div class="game" th:each="game:${games}">
@@ -11,8 +11,4 @@
             <a class="btn btn-danger btn-sm" th:href="'/games/delete/'+${game.id}">Delete</a>
         </button>
     </div>
-
-
-
-
 </section>

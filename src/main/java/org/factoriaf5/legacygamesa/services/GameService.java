@@ -13,9 +13,10 @@ public class GameService {
     private final GameRepository gameRepository;
 
     @Autowired
-    public GameService(GameRepository gameRepository){
+    public GameService(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
     }
+
     public void save(Game game) {
         gameRepository.save(game);
     }
@@ -28,7 +29,9 @@ public class GameService {
         gameRepository.deleteById(id);
     }
 
+
     public List<Game> allGame() {
-        return (List<Game>) gameRepository.findAll();
+        List<Game> allGame = (List<Game>) gameRepository.findAll();
+        return allGame;
     }
 }

@@ -8,13 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "games")
 public class Game implements Serializable {
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = SEQUENCE)
     private Long id;
 
     @NotNull
@@ -24,7 +24,7 @@ public class Game implements Serializable {
     private String platform;
 
     @NotNull
-    private String priceoriginal;
+    private double priceoriginal;
 
     private String photo;
 
@@ -63,11 +63,11 @@ public class Game implements Serializable {
         this.platform = platform;
     }
 
-    public String getPriceoriginal() {
+    public double getPriceoriginal() {
         return priceoriginal;
     }
 
-    public void setPriceoriginal(String priceoriginal) {
+    public void setPriceoriginal(double priceoriginal) {
         this.priceoriginal = priceoriginal;
     }
 

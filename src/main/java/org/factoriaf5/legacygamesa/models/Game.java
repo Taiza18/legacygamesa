@@ -79,4 +79,9 @@ public class Game implements Serializable {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+
+    public String getPhotoImagePath() {
+        if (photo == null || id == null) return null;
+        return "/game-photo/" + id + "/" + photo;
+    }
 }

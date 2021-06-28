@@ -1,5 +1,6 @@
 <section class="container" xmlns:th="http://www.thymeleaf.org">
     <h1 th:text="${title}"></h1>
+    <div class="game-list">
 
     <div class="game" th:each="game:${games}">
         <img th:src="@{${game.photoImagePath}}" />
@@ -12,4 +13,8 @@
             <a class="btn btn-danger btn-sm" th:href="'/games/delete/'+${game.id}">Delete</a>
         </button>
     </div>
+<<<<<<< HEAD
+=======
+    </div>
+>>>>>>> 7a4a6f43ba9db0448e3922c290ca3340e95bfefb
 </section>

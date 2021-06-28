@@ -1,9 +1,27 @@
-.logo {
+.img.logo {
     height: 60px;
     width: 60px;
 }
-.navbar {
-    height: 60px;
-    width: 100%;
-    color: #FC3727;
+.container-fluid {
+    background-color: #FC3727;
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.game {
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+
+}
+.game img {
+    width: 80%;
+    margin: auto;
+    display: block;
+
 }

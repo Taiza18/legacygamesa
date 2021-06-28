@@ -1,5 +1,6 @@
 <section class="container">
     <h1 th:text="${title}"></h1>
+    <div class="game-list">
 
     <div class="game" th:each="game:${games}">
         <img th:src="@{${game.photoImagePath}}" />
@@ -12,8 +13,5 @@
             <a class="btn btn-danger btn-sm" th:href="'/games/delete/'+${game.id}">Delete</a>
         </button>
     </div>
-
-
-
-
+    </div>
 </section>

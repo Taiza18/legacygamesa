@@ -7,3 +7,14 @@
     width: 100%;
     color: #FC3727
 }
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.game {
+    border: 1px; solid-color: black;
+    width: 250px;
+    border-radius: 20px;
+}

@@ -1,7 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add CSS and JS to Thymeleaf</title>
+    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet" />
+</head>
 <html>
+
 <body>
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
+
+        <a class="navbar-brand" href="/">Legacy Games</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <title>Shop Games</title>
+    <link th:href="@{/style/stylesheet.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+<h2>Legacy Games</h2>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light >
+    <div class="container-fluid>
+
        <img class="logo" th:src="@{../img/logo.png}">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

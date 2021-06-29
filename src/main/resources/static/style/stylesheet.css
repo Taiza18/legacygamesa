@@ -1,9 +1,13 @@
-.img.logo {
+.logo {
     height: 60px;
-    width: 60px;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
 }
 .container-fluid {
     background-color: #FC3727;
+    height: 60px;
+    width: 1800px;
 }
 
 .game-list {
@@ -23,5 +27,16 @@
     width: 80%;
     margin: auto;
     display: block;
+
+}
+body{
+    background-attachment: fixed;
+    background: url("img/provando2.jpg");
+    background-position: 250px 250px;
+    display:flex;
+    align-items:center;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
 
 }

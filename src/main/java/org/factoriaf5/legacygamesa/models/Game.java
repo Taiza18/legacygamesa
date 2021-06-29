@@ -24,7 +24,7 @@ public class Game implements Serializable {
     private String platform;
 
     @NotNull
-    private String priceoriginal;
+    private double priceoriginal;
 
     private String photo;
 
@@ -63,11 +63,11 @@ public class Game implements Serializable {
         this.platform = platform;
     }
 
-    public String getPriceoriginal() {
+    public double getPriceoriginal() {
         return priceoriginal;
     }
 
-    public void setPriceoriginal(String priceoriginal) {
+    public void setPriceoriginal(double priceoriginal) {
         this.priceoriginal = priceoriginal;
     }
 

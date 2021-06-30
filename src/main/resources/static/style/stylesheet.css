@@ -8,6 +8,7 @@
     background-color: #FC3727;
     height: 60px;
     width: 1800px;
+
 }
 
 .game-list {
@@ -32,4 +33,6 @@
 body{
     margin: auto ;
     background-color:#FFAA05;
+
 }
+

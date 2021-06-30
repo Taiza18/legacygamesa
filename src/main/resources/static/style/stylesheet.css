@@ -33,7 +33,6 @@ body{
     background-attachment: fixed;
     background: url("img/provando2.jpg");
     background-position: 250px 250px;
-    display:flex;
     align-items:center;
     font-size: 25px;
     padding: 0px;

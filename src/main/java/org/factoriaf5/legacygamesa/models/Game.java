@@ -2,10 +2,7 @@ package org.factoriaf5.legacygamesa.models;
 
 import com.sun.istack.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -27,6 +24,9 @@ public class Game implements Serializable {
     @NotNull
     private double priceoriginal;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
     private String photo;
 
     @Override
@@ -36,6 +36,7 @@ public class Game implements Serializable {
         ", title='" + title + '\'' +
         ", platform='" + platform + '\'' +
         ", priceoriginal='" + priceoriginal + '\'' +
+        ", category='" + category + '\'' +
         ", photo='" + photo + '\'' +
         '}';
     }
@@ -72,9 +73,16 @@ public class Game implements Serializable {
         this.priceoriginal = priceoriginal;
     }
 
-
     public String getphoto() {
         return photo;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public void setPhoto(String photo) {
@@ -85,4 +93,5 @@ public class Game implements Serializable {
         if (photo == null || id == null) return null;
         return "/game-photo/" + id + "/" + photo;
     }
+
 }

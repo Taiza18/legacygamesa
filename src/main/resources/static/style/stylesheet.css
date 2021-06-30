@@ -30,12 +30,6 @@
 
 }
 body{
-    background-attachment: fixed;
-    background: url("img/provando2.jpg");
-    background-position: 250px 250px;
-    align-items:center;
-    font-size: 25px;
-    padding: 0px;
-    margin: 0px 0px 0px 0px;
-
+    margin: auto ;
+    background-color:#FFAA05;
 }

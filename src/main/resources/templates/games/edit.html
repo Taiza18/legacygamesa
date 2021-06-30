@@ -5,20 +5,7 @@
 <body>
 <header th:replace="fragments/header"></header>
 <section class="container">
-    <h1 th:text="~${title}"></h1>
-    <ul class="game-filters">
-        <ul>
-            <li><a href="#">All</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Shooter</a></li>
-            <li><a href="#">Racing</a></li>
-            <li><a href="#">Role-playing</a></li>
-            <li><a href="#">Puzzle</a></li>
-            <li><a href="#">Platform</a></li>
-            <li><a href="#">Misc</a></li>
-        </ul>
-    </ul>
+
     <form th:action="@{/games/new}" th:object="${game}" method="post" enctype="multipart/form-data">
         <div class="form-group">
         <input type="hidden" th:field="*{id}">

@@ -25,6 +25,8 @@ public class HomeController {
         model.addAttribute("games", games);
         return "home";
     }
+
+
 }
 
 

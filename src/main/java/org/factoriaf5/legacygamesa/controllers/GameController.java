@@ -1,5 +1,4 @@
 package org.factoriaf5.legacygamesa.controllers;
-
 import org.factoriaf5.legacygamesa.models.Game;
 import org.factoriaf5.legacygamesa.services.CategoryService;
 import org.factoriaf5.legacygamesa.services.GameService;
@@ -22,18 +21,9 @@ public class GameController {
     @Autowired
     public GameController(GameService gameService) {
         this.gameService = gameService;
-<<<<<<< HEAD
-    }
-
-
-=======
         this.categoryService = categoryService;
     }
 
-
-
-
->>>>>>> edfb3acd0ed81992d2d178ef1abd346bfd2680b5
     @GetMapping("/games/new")
     public String newGame(Model model) {
         Game game = new Game();

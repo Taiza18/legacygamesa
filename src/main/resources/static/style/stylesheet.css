@@ -15,6 +15,10 @@ nav {
     width: 100%;
 }
 
+
+
+
+
 .game-filters{
     display: flex;
     align-items: center;
@@ -26,7 +30,15 @@ nav {
     margin: auto;
     width: 1400px;
     height: 400px;
+}
 
+.plataform {
+    display: flex;
+    align-items: center;
+}
+.plataform2 {
+    display: flex;
+    align-items: center;
 
 }
 

@@ -24,9 +24,6 @@ public class GameController {
         this.categoryService = categoryService;
     }
 
-
-
-
     @GetMapping("/games/new")
     public String newGame(Model model){
         Game game = new Game();
@@ -36,7 +33,9 @@ public class GameController {
     }
 
     @PostMapping("games/new")
-   public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
+   public String addGame
+            (@ModelAttribute Game game,
+            @RequestParam("image") MultipartFile multipartFile) throws IOException {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         game.setPhoto(fileName);
         gameService.save(game);

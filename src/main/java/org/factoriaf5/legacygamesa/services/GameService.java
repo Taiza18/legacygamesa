@@ -29,7 +29,6 @@ public class GameService {
         gameRepository.deleteById(id);
     }
 
-
     public List<Game> allGame() {
         List<Game> allGame = (List<Game>) gameRepository.findAll();
         return allGame;

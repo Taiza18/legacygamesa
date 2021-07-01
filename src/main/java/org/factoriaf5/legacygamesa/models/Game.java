@@ -4,6 +4,7 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -15,6 +16,8 @@ public class Game implements Serializable {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    private List<Game> games;
     @NotNull
     private String title;
 
@@ -94,4 +97,11 @@ public class Game implements Serializable {
         return "/game-photo/" + id + "/" + photo;
     }
 
+    public List<Game> getGames() {
+        return games;
+    }
+
+    public void setGames(List<Game> games) {
+        this.games = games;
+    }
 }

@@ -19,9 +19,10 @@ public class GameController {
     private GameService gameService;
 
     @Autowired
-    public GameController(GameService gameService) {
-        this.gameService = gameService;
+    public GameController(CategoryService categoryService, GameService gameService) {
         this.categoryService = categoryService;
+        this.gameService = gameService;
+
     }
 
     @GetMapping("/games/new")

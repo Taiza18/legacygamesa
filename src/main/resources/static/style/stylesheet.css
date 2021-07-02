@@ -107,4 +107,9 @@ a.navbar-brand{
 a.nav-link{
     color: whitesmoke;
 }
-
+a.btn-outline-success{
+    color: whitesmoke;
+}
+a.d-flex{
+    color: whitesmoke;
+}

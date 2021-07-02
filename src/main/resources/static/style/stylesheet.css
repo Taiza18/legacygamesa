@@ -9,6 +9,9 @@
     gap: 10px;
     font-family: 'Exo 2', sans-serif;
 }
+.container-fluid {
+    justify-self: flex-end;
+}
 
 nav {
     background-color: #FC3727;
@@ -16,10 +19,21 @@ nav {
     width: 100%;
     font-family: 'Exo 2', sans-serif;
 }
+.navbar-brand {
+    background-color: #FC3727;
+    border: none;
+    justify-content: right;
+    text-decoration: none;
+    font-size: 20px;
+}
 
-
-
-
+.nav-link {
+    background-color: #FC3727;
+    border: none;
+    justify-content: right;
+    text-decoration: none;
+    font-size: 20px;
+}
 
 .game-filters{
     display: flex;
@@ -33,19 +47,18 @@ nav {
     margin: auto;
     width: 1400px;
     height: 400px;
-<<<<<<< HEAD
     font-family: 'Exo 2', sans-serif;
-=======
-}
->>>>>>> 69c1d73d756255fc303fca373f89b82a00886a47
 
+}
 .plataform {
     display: flex;
     align-items: center;
+    font-family: 'Exo 2', sans-serif;
 }
 .plataform2 {
     display: flex;
     align-items: center;
+    font-family: 'Exo 2', sans-serif;
 
 }
 
@@ -75,6 +88,7 @@ nav {
 
 body {
     background-color: #FFAA05;
+    font-family: 'Exo 2', sans-serif;
 
 }
 

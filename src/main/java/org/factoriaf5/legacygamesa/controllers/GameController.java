@@ -59,9 +59,8 @@ public class GameController {
         return "redirect:/home";
     }
 
-    @GetMapping("/search")
+    @GetMapping("/games/search")
     String searchGame(Model model, @RequestParam String word) {
-            model.addAttribute("game", List.of());
             model.addAttribute("title", "games it contains" + word);
             model.addAttribute("games", gameService.searchGame(word));
             return "games/all";

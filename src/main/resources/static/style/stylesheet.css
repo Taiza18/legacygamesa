@@ -108,6 +108,13 @@ a.navbar-brand{
 a.nav-link{
     color: whitesmoke;
 }
+<<<<<<< HEAD
+a.btn-outline-success{
+    color: whitesmoke;
+}
+a.d-flex{
+    color: whitesmoke;
+=======
 .box {
     height: 200px;
     width: 300px;
@@ -115,4 +122,5 @@ a.nav-link{
 }
 h3 {
     color: red;
+>>>>>>> 37e3cbc989eb9390ceac73c042b9a142fcbdfd9b
 }

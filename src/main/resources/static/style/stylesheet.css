@@ -49,16 +49,11 @@ nav {
     margin: auto;
     width: 1400px;
     height: 400px;
-
-
     font-family: 'Exo 2', sans-serif;
 
 }
 
 
-.font-family: 'Exo 2', sans-serif;{
-
-}
 .plataform {
     display: flex;
     align-items: center;
@@ -100,8 +95,16 @@ nav {
 }
 
 body {
-    background-color: #FFAA05;
+    background-color: black;
     font-family: 'Exo 2', sans-serif;
+    color: orangered;
+}
 
+a.navbar-brand{
+    color: whitesmoke;
+}
+
+a.nav-link{
+    color: whitesmoke;
 }
 

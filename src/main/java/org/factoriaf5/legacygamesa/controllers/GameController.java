@@ -19,9 +19,10 @@ public class GameController {
     private GameService gameService;
 
     @Autowired
-    public GameController(GameService gameService) {
-        this.gameService = gameService;
+    public GameController(CategoryService categoryService, GameService gameService) {
         this.categoryService = categoryService;
+        this.gameService = gameService;
+
     }
 
     @GetMapping("/games/new")
@@ -33,7 +34,7 @@ public class GameController {
     }
 
     @PostMapping("games/new")
-    public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
+   public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         game.setPhoto(fileName);
         gameService.save(game);

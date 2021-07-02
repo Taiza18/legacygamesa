@@ -52,8 +52,6 @@ nav {
     font-family: 'Exo 2', sans-serif;
 
 }
-
-
 .plataform {
     display: flex;
     align-items: center;
@@ -75,10 +73,11 @@ nav {
     flex-wrap: wrap;
     padding: 20px;
     font-family: 'Exo 2', sans-serif;
+
 }
 
 .game {
-    border: 1px solid black;
+    border: 5px solid white;
     width: 250px;
     border-radius: 20px;
     margin: 10px;
@@ -107,9 +106,19 @@ a.navbar-brand{
 a.nav-link{
     color: whitesmoke;
 }
+<<<<<<< HEAD
 a.btn-outline-success{
     color: whitesmoke;
 }
 a.d-flex{
     color: whitesmoke;
+=======
+.box {
+    height: 200px;
+    width: 300px;
+
+}
+h3 {
+    color: red;
+>>>>>>> 37e3cbc989eb9390ceac73c042b9a142fcbdfd9b
 }

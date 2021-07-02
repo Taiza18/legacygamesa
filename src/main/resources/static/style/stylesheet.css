@@ -53,6 +53,10 @@ nav {
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c9fab9671634c3da4c9b2dacc5e3efafec26f2f2
 .plataform {
     display: flex;
     align-items: center;
@@ -94,8 +98,16 @@ nav {
 }
 
 body {
-    background-color: #FFAA05;
+    background-color: black;
     font-family: 'Exo 2', sans-serif;
+    color: orangered;
+}
 
+a.navbar-brand{
+    color: whitesmoke;
+}
+
+a.nav-link{
+    color: whitesmoke;
 }
 

@@ -39,6 +39,8 @@ nav {
     display: flex;
     align-items: center;
     font-family: 'Exo 2', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
 
 }
 
@@ -61,11 +63,15 @@ nav {
     display: flex;
     align-items: center;
     font-family: 'Exo 2', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
 }
 .plataform2 {
     display: flex;
     align-items: center;
     font-family: 'Exo 2', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
 
 }
 

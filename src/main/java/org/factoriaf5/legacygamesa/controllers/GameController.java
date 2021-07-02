@@ -19,9 +19,10 @@ public class GameController {
     private GameService gameService;
 
     @Autowired
-    public GameController(GameService gameService) {
-        this.gameService = gameService;
+    public GameController(CategoryService categoryService, GameService gameService) {
         this.categoryService = categoryService;
+        this.gameService = gameService;
+
     }
 
     @GetMapping("/games/new")
@@ -29,6 +30,7 @@ public class GameController {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "Create new games");
+        model.addAttribute("categories", categoryService.allCategories());
         return "games/edit";
     }
 
@@ -57,13 +59,12 @@ public class GameController {
         return "redirect:/home";
     }
 
-    @GetMapping("/search")
+    @GetMapping("/games/search")
     String searchGame(Model model, @RequestParam String word) {
-        model.addAttribute("game", List.of());
-        model.addAttribute("title", "games it contains"+word);
-        model.addAttribute("games",gameService.searchGame(word));
-        return "games/all";
+            model.addAttribute("title", "games it contains" + word);
+            model.addAttribute("games", gameService.searchGame(word));
+            return "games/all";
+        }
     }
-}
 
 

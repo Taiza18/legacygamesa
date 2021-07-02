@@ -50,7 +50,10 @@ nav {
     height: 400px;
     font-family: 'Exo 2', sans-serif;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb29c7db52b7b6f946cc4f934ea2178098733927
 .plataform {
     display: flex;
     align-items: center;
@@ -72,10 +75,11 @@ nav {
     flex-wrap: wrap;
     padding: 20px;
     font-family: 'Exo 2', sans-serif;
+
 }
 
 .game {
-    border: 1px solid black;
+    border: 5px solid white;
     width: 250px;
     border-radius: 20px;
     margin: 10px;
@@ -104,4 +108,11 @@ a.navbar-brand{
 a.nav-link{
     color: whitesmoke;
 }
+.box {
+    height: 200px;
+    width: 300px;
 
+}
+h3 {
+    color: red;
+}

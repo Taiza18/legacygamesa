@@ -30,11 +30,12 @@ public class GameController {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "Create new games");
+        model.addAttribute("categories", categoryService.allCategories());
         return "games/edit";
     }
 
     @PostMapping("games/new")
-   public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
+    public String addGame(@ModelAttribute Game game, @RequestParam("image") MultipartFile multipartFile) throws IOException {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         game.setPhoto(fileName);
         gameService.save(game);
@@ -60,11 +61,11 @@ public class GameController {
 
     @GetMapping("/search")
     String searchGame(Model model, @RequestParam String word) {
-        model.addAttribute("game", List.of());
-        model.addAttribute("title", "games it contains"+word);
-        model.addAttribute("games",gameService.searchGame(word));
-        return "games/all";
+            model.addAttribute("game", List.of());
+            model.addAttribute("title", "games it contains" + word);
+            model.addAttribute("games", gameService.searchGame(word));
+            return "games/all";
+        }
     }
-}
 
 

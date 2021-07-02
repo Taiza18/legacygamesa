@@ -36,6 +36,7 @@ public class GameService {
     public List<Game> searchGame(String word) {
         return gameRepository.findGamesByTitleContaining(word);
     }
+
 }
 
 
